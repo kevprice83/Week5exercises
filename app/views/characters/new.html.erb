@@ -1,0 +1,21 @@
+<form action="/new" method="post">
+
+ <label for="name">Name:</label>
+ <input id="name" type="text" name="name">
+
+ <label for="occupation">Occupation:</label>
+ <input id="occupation" type="text" name="occupation">
+
+ <label for="debt">Debt:</label>
+ <input id="debt" type="text" name="debt">
+
+ <label for="weapon">Weapon:</label>
+ <input id="weapon" type="text" name="weapon">
+
+ <input type="submit" class ="js-submit" value="Save">
+
+</form>
+
+<script type="text/javascript">
+  $('.js-submit').on('click', onSubmit);
+</script>
