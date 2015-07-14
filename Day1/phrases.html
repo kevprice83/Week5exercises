@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <body>
+      <div class="container">
+      <p class="new"></p>
+
+      <button type="submit">COOL</button>
+
+      <form id="phrase">
+        <input type="text" id="phrase2" class="name" placeholder="Phrase"></input>
+      </form>
+        
+      </div>
+
+      <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script type="text/javascript">
+
+      $('form').on('submit', function(event) {
+      event.preventDefault();
+        phrases.push($('#phrase2').val());
+      });
+
+      $(document).on('ready', function(){
+        newPhrase();
+      });
+
+      var phrases = [
+      'I like pie.', 'Add some of your own phrases here.', 'Make sure to add a comma after all of your phrases except the last one.'];
+
+      function newPhrase() {
+
+
+      var onephrase = phrases[Math.floor(Math.random() * phrases.length)];
+      $('.new').text(onephrase);
+      };
+
+      $('button').on('click', function(){
+        newPhrase();
+      });
+
+      </script>
+      
+    </body>
+
+
+  </html>
